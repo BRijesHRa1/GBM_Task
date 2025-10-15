@@ -1,0 +1,399 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "ORDS generated API for gbm_api",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://oracleapex.com/ords/data_integration_rest_api/api"
+      }
+    ],
+    "paths": {
+      "/clinical": {
+        "get": {
+          "description": "Retrieve records from gbm_api",
+          "responses": {
+            "200": {
+              "description": "The queried record.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "age_at_initial_pathologic_diagnosis": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "ajcc_pathologic_tumor_stage": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "birth_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "cancer_type_abbreviation": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "cause_of_death": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "clinical_stage": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "death_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "gender": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "histological_grade": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "histological_type": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "initial_pathologic_dx_year": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "last_contact_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "margin_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "menopause_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "new_tumor_event_dx_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "new_tumor_event_site": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "new_tumor_event_site_other": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "new_tumor_event_type": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "patient": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "primary_disease": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "race": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "residual_tumor": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "sample_id": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "sample_type": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "sample_type_id": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "treatment_outcome_first_course": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "tumor_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "vital_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "parameters": []
+        }
+      },
+      "/expression/{gene_symbol}": {
+        "get": {
+          "description": "Retrieve records from gbm_api",
+          "responses": {
+            "200": {
+              "description": "The queried record.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "expression_value": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "sample_id": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "gene_symbol",
+              "in": "query",
+              "schema": {
+                "type": "string"
+              },
+              "description": "Implicit parameter"
+            }
+          ]
+        }
+      },
+      "/patient/{sample_id}": {
+        "get": {
+          "description": "Retrieve records from gbm_api",
+          "responses": {
+            "200": {
+              "description": "The queried record.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "age_at_initial_pathologic_diagnosis": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "ajcc_pathologic_tumor_stage": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "birth_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "cancer_type_abbreviation": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "cause_of_death": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "clinical_stage": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "death_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "dfi": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "dfi_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "dss": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "dss_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "gender": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "gene_expression_record_count": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "histological_grade": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "histological_type": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "initial_pathologic_dx_year": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "last_contact_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "margin_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "menopause_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "new_tumor_event_dx_days_to": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "new_tumor_event_site": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "new_tumor_event_site_other": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "new_tumor_event_type": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "os": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "os_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "patient": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "pfi": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "pfi_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "primary_disease": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "race": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "redaction": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "residual_tumor": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "sample_id": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "sample_type": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "sample_type_id": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "treatment_outcome_first_course": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "tumor_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "vital_status": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "sample_id",
+              "in": "query",
+              "schema": {
+                "type": "string"
+              },
+              "description": "Implicit parameter"
+            }
+          ]
+        }
+      },
+      "/survival/{sample_id}": {
+        "get": {
+          "description": "Retrieve records from gbm_api",
+          "responses": {
+            "200": {
+              "description": "The queried record.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "dfi": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "dfi_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "dss": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "dss_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "os": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "os_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "pfi": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "pfi_time": {
+                              "$ref": "#/components/schemas/NUMBER"
+                            },
+                            "redaction": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            },
+                            "sample_id": {
+                              "$ref": "#/components/schemas/VARCHAR2"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "sample_id",
+              "in": "query",
+              "schema": {
+                "type": "string"
+              },
+              "description": "Implicit parameter"
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "NUMBER": {
+          "type": "number"
+        },
+        "VARCHAR2": {
+          "type": "string"
+        }
+      }
+    }
+  }
+   
+  
