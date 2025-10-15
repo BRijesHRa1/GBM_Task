@@ -27,7 +27,7 @@ The foundational phase of the project involved preparing the raw data for databa
     - Converted survival columns (except sample_id) to numeric.
     - Converted expression values to numeric after melting.
 
-4.  **Gene Expression Unpivoting**: This was the most critical transformation. The `GBM_gene_expression_data.csv` file was in a **"wide" format**, with over 16,000 columns, one for each gene. This structure is extremely inefficient for database querying. The data was "melted" or "unpivoted" into a **"long" format** with three columns: `sample_id`, `gene_symbol`, and `expression_value`. This transformation resulted in a tidy, normalized table structure that is optimal for relational database storage and retrieval.
+4.  **Normalization (Gene Expression Unpivoting)**: This was the most critical transformation. The `GBM_gene_expression_data.csv` file was in a **"wide" format**, with over 16,000 columns, one for each gene. This structure is extremely inefficient for database querying. The data was "melted" or "unpivoted" into a **"long" format** with three columns: `sample_id`, `gene_symbol`, and `expression_value`. This transformation resulted in a tidy, normalized table structure that is optimal for relational database storage and retrieval.
 
 **Referential integrity**:
 Kept only survival and expression rows whose sample_id exists in clinical.
