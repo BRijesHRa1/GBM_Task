@@ -127,7 +127,10 @@ CREATE TABLE gene_expression (
 A RESTful API was created using **Oracle APEX RESTful Services** to provide programmatic access to the data.
 
 **Base URL**: `https://oracleapex.com/ords/your_schema/api/v1/`
-
+**Endpoint:-** /api/clinical **Example :-** https://oracleapex.com/ords/data_integration_rest_api/api/clinical
+**Endpoint:- /api/expression/{gene} Example :-** https://oracleapex.com/ords/data_integration_rest_api/api/expression/bud13
+**Endpoint:-** /api/survival/{sample_id} **Example :-** https://oracleapex.com/ords/data_integration_rest_api/api/survival/TCGA-12-5299-01
+**Endpoint:-** /api/patient/{sample_id} **Example :-** https://oracleapex.com/ords/data_integration_rest_api/api/patient/TCGA-12-5299-01
 ---
 
 #### `GET /clinical`
