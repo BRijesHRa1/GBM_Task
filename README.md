@@ -364,4 +364,10 @@ Returns a comprehensive, nested JSON object for a single patient, including all 
   1.  **Performance Optimization**: In a production environment with the full dataset, query performance would be critical. **Database indexes** should be created on the `gene_expression(gene_symbol)` column and all foreign key columns (`sample_id`) to accelerate API response times for joins and lookups.
   2.  **Scalable API Design**: The `/patient-full` endpoint, while functional, is not scalable as it returns a massive JSON payload. A better production design would be to implement **pagination** on a dedicated expression endpoint (e.g., `/expression/by-sample/{sample_id}?page=1&limit=100`) to allow clients to retrieve large result sets in manageable chunks.
 
+
+**Notes on constraints:**
+
+Due to Oracle APEX Free tier limits, I used 15 sample IDs for the gene dataset (as mentioned earlier).
+
+For the bonus joined endpoint (/api/patient/{sample_id}), I return merged patient/sample details and the gene count. The Free tier restricts returning the full gene list in JSON, so I’ve included the count and key fields instead.
   
