@@ -128,6 +128,9 @@ A RESTful API was created using **Oracle APEX RESTful Services** to provide prog
 
 **Base URL**: `https://oracleapex.com/ords/your_schema/api/v1/`
 
+
+
+
 Endpoints (GET)
 
 /api/clinical
@@ -152,6 +155,13 @@ Returns patient-level clinical data for a sample.
 Path param: sample_id (e.g., TCGA-12-5299-01)
 Example:
 https://oracleapex.com/ords/data_integration_rest_api/api/patient/TCGA-12-5299-01
+
+/api/expression/by-sample/{sample_id}
+Returns all gene expression data linked to sample IDs
+Path param: sample_id (e.g., TCGA-12-5299-01)
+Example:
+https://oracleapex.com/ords/data_integration_rest_api/api/expression/by-sample/TCGA-06-2565-01
+
 
 ---
 
