@@ -128,39 +128,13 @@ A RESTful API was created using **Oracle APEX RESTful Services** to provide prog
 
 **Base URL**: `https://oracleapex.com/ords/your_schema/api/v1/`
 
-
-
-
-Endpoints (GET)
-
-/api/clinical
-Returns clinical records.
-Example:
-https://oracleapex.com/ords/data_integration_rest_api/api/clinical
-
-/api/expression/{gene}
-Returns expression for a given gene.
-Path param: gene (e.g., bud13)
-Example:
-https://oracleapex.com/ords/data_integration_rest_api/api/expression/bud13
-
-/api/survival/{sample_id}
-Returns survival data for a sample.
-Path param: sample_id (e.g., TCGA-12-5299-01)
-Example:
-https://oracleapex.com/ords/data_integration_rest_api/api/survival/TCGA-12-5299-01
-
-/api/patient/{sample_id}
-Returns patient-level clinical data for a sample.
-Path param: sample_id (e.g., TCGA-12-5299-01)
-Example:
-https://oracleapex.com/ords/data_integration_rest_api/api/patient/TCGA-12-5299-01
-
-/api/expression/by-sample/{sample_id}
-Returns all gene expression data linked to sample IDs
-Path param: sample_id (e.g., TCGA-12-5299-01)
-Example:
-https://oracleapex.com/ords/data_integration_rest_api/api/expression/by-sample/TCGA-06-2565-01
+| Endpoint                                | Description                                           | Example                                                                                                                                                                                          |
+| --------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `/api/clinical`                         | Returns all clinical data in JSON format              | [https://oracleapex.com/ords/data_integration_rest_api/api/clinical](https://oracleapex.com/ords/data_integration_rest_api/api/clinical)                                                         |
+| `/api/expression/{gene}`                | Returns all expression values for a given gene        | [https://oracleapex.com/ords/data_integration_rest_api/api/expression/bud13](https://oracleapex.com/ords/data_integration_rest_api/api/expression/bud13)                                         |
+| `/api/expression/by-sample/{sample_id}` | Returns all gene expression data linked to sample IDs | [https://oracleapex.com/ords/data_integration_rest_api/api/expression/by-sample/TCGA-06-2565-01](https://oracleapex.com/ords/data_integration_rest_api/api/expression/by-sample/TCGA-06-2565-01) |
+| `/api/survival/{sample_id}`             | Returns survival info for a given sample              | [https://oracleapex.com/ords/data_integration_rest_api/api/survival/TCGA-12-5299-01](https://oracleapex.com/ords/data_integration_rest_api/api/survival/TCGA-12-5299-01)                         |
+| `/api/patient/{sample_id}`              | Returns merged data from all three tables             | [https://oracleapex.com/ords/data_integration_rest_api/api/patient/TCGA-12-5299-01](https://oracleapex.com/ords/data_integration_rest_api/api/patient/TCGA-12-5299-01)                           |
 
 
 ---
